@@ -15,7 +15,7 @@ public class TestApplication {
       FhirContext ctx = FhirContext.forR4();
 
       // Create a client
-      IGenericClient client = ctx.newRestfulGenericClient("https://hapi.fhir.org/baseR4");
+      IGenericClient client = ctx.newRestfulGenericClient("http://hapi.fhir.org/baseR4");
 
       // Read a patient with the given ID
       Patient patient = client.read().resource(Patient.class).withId("example").execute();
